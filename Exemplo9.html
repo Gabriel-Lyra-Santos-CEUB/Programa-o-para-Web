@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 9 - Formulario</title>
+</head>
+
+<body>
+    <div>
+        <h1>Exemplo 9 - Formularios HTML</h1>
+        <form action="paginaDestino.html" method="post">
+            <fieldset>
+                <legend>Cadastro de preferencias</legend>
+                <div>
+                    <label for="">Nome</label>
+                    <br>
+                    <input type="text" name="txtNome" id="txtNome">
+                </div>
+                <div>
+                    <label for="">Ano nascimento</label>
+                    <br>
+                    <input type="number" name="txtAnoNascimento" id="txtAnoNascimento">
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <br>
+                    <input type="email" name="txtEmail" id="txtEmail">
+                </div>
+                <div>
+                    <label for="">Selecione um ou mais generos de filme</label>
+                    <br>
+                    <input type="checkbox" name="chkGeneroFilme" id="chkGeneroFilme" value="1">Romance
+                    <input type="checkbox" name="chkGeneroFilme" id="chkGeneroFilme" value="2">Ficçao
+                    <input type="checkbox" name="chkGeneroFilme" id="chkGeneroFilme" value="3">Comedia
+                    <input type="checkbox" name="chkGeneroFilme" id="chkGeneroFilme" value="4">Terror
+                    <input type="checkbox" name="chkGeneroFilme" id="chkGeneroFilme" value="5">Drama
+                </div>
+                <div>
+                    <label for="">Selecione um destino favorito</label> <br>
+                    <input type="radio" name="rdDestino" id="rdDestino" value="1">Cachoeira <br>
+                    <input type="radio" name="rdDestino" id="rdDestino" value="2">Praia <br>
+                    <input type="radio" name="rdDestino" id="rdDestino" value="3">Rural <br>
+                    <input type="radio" name="rdDestino" id="rdDestino" value="4">Vale <br>
+
+                </div>
+                <br>
+                <div>
+                    <label for="">Selecione uma região favorita</label> <br>
+                    <select name="cboRegiao" id="cboRegiao">
+                        <option value="1">Norte</option>
+                        <option value="2">Sul</option>
+                        <option value="3">Nordeste</option>
+                        <option value="4">Sudoeste</option>
+                        <option value="5">Centro Oeste</option>
+                        <option value="6">Outros</option>
+
+                    </select>
+                </div>
+                <br>
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
