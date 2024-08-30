@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 8 - Formularios HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario de cadastro de pessoas</h1>
+    </header>
+    <main>
+        <form action="paginaDestino.php" method="post">
+            <div>
+                <div>
+                    <label for="">Informe o seu CPF</label>
+                    <input type="text" name="txtCPFName" id="txtCPF" required>
+                </div>
+                <br>
+                <div>
+                    <label for="">Informe a sua Identidade</label>
+                    <input type="text" name="txtIdentidadeName" id="txtIdentidade">
+                </div>
+                <br>
+                <div>
+                    <label for="">Informe o seu nome</label>
+                    <input type="text" name="txtNomeName" id="txtNome" required>
+                </div>
+                <br>
+                <div>
+                    <label for="">Informe a sua data de nascimento</label>
+                    <input type="date" name="txtDataNascimentoName" id="txtDataNascimentoName">
+                </div>
+                <br>
+                <div>
+                    <label for="">Informe o seu estado civil</label>
+                    <select name="cboEstadoCivil" id="">
+                        <option value="1">Solteiro</option>
+                        <option value="2">Casado</option>
+                        <option value="3">Divorciado</option>
+                        <option value="4">Viovo</option>
+                        <option value="5">TicoTico no fuba</option>
+                        <option value="6">Outros</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="">Informe uma senha</label>
+                    <input type="password" name="txtSenhaName" id="txtSenha">
+                </div>
+                <div>
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
