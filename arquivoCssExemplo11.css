@@ -1,0 +1,32 @@
+h1 {
+    font-family: cursive;
+    font-weight: 800;
+    color: deeppink;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    color: rgb(144, 14, 230);
+}
+
+p {
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    margin: 20px;
+    padding: 5px;
+}
+
+#paragrafo1 {
+    color: darkgreen;
+    font-family: fantasy;
+    text-align: justify;
+}
+
+.div1 {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-left: red solid 4px;
+    margin: 10px;
+    padding: 10px;
+}
