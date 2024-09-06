@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 10 - CSS</title>
+    <style>
+        h1 {
+            font-family: cursive;
+            font-weight: 800;
+            color: deeppink;
+        }
+
+        h2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 800;
+            color: rgb(144, 14, 230);
+        }
+
+        p {
+            font-size: 16px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 400;
+            margin: 20px;
+            padding: 5px;
+        }
+
+        #paragrafo1 {
+            color: darkgreen;
+            font-family: fantasy;
+            text-align: justify;
+        }
+
+        .div1 {
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            border-left: red solid 4px;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Exemplo 10 - CSS</h1>
+        <h2>Regras CSS</h2>
+        
+        <div>
+            <p id="paragrafo1">
+                Uma regra CSS é aquela que contém seletores,
+                propriedades e valores que quando aplicado
+                a um elemento html tem a capacidade de alterar
+                seu estilo.
+                Uma regra css sempre estará dentro de chaves
+                e possuirá um seletor.
+                Por exemplo: h1{propriedade:valor;}
+            </p>
+            <p>
+                Os seletores são divididos em três tipos basicos:
+                seletore de tipo, de id e de classe.
+                Cada um desses seletores tem uma especificidade
+                que determina sua abrangência.
+            </p>
+            <p>Exemplo</p>
+        </div>
+        <div class="div1">
+            <h2>Seletor de Tipo</h2>
+            <p>
+                Esse seletor é caracterizado por se assemelhar a uma tag html.
+                Ele sempre será representado pela letra da tag.
+                Por examplo: h1{propriedade:valor}
+            </p>
+        </div>
+        <div class="div1">
+            <h2>Seletor de Id</h2>
+            <p>
+                Os seletores de id são aqueles que são aplicados aplicados
+                elementos html com um id especifico.
+                Esse seletor começa pelo simbolo #.
+                Por exemplo: #Div1{propriedade:valor}
+            </p>
+        </div>
+        <div class="div1">
+            <h2>Seletor de Classe</h2>
+            <p>
+                Os Seletores de classe são aqueles em que atribuimos
+                ou aplicamos estilos css a elementos html que possuam
+                o atributo class, esse seletor pode ser aplicado a mais
+                de um elemento html. Esse seletor sempre começara por
+                um "ponto" "." seguido do nome da classe.
+                Por exemplo: .classe1{propriedade:valor}
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
