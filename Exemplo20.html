@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 20 CSS</title>
+    <style>
+        .wrapper{
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        .wrapper>*{
+            padding: 10px;
+            flex: 1 100%;
+        }
+        .header{
+            background: tomato;
+        }
+        .footer{
+            background: lightgreen;
+        }
+        .main{
+            text-align: left;
+            background: deepskyblue;
+        }
+        .aside-1{
+            background: goldenrod;
+        }
+        .aside-2{
+            background: hotpink;
+        }
+        @media all and (min-widht:600px) {
+            .aside{
+                flex: 1 0 1;
+            }
+        }
+        @media all and (min-widht:800px) {
+            .main{
+                flex: 3 0px;
+            }
+            .aside-1{
+                order: 1;
+            }
+            .main{
+                order: 2;
+            }
+            .aside-2{
+                order: 3;
+            }
+            .footer{
+                order: 4;
+            }
+        }
+        body{
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Exemplo Responsivo flexbox - order</h1>
+        <header class="header">
+            Header
+        </header>
+        <article class="main">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, tempore rem. Asperiores cumque, recusandae voluptate, illo, rem laborum maiores incidunt perspiciatis repellat ut alias reprehenderit. Perspiciatis reprehenderit sunt mollitia beatae.</p>
+        </article>
+        <aside class="aside aside-1"> Aside 1</aside>
+        <aside class="aside aside-2"> Aside 2</aside>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>
