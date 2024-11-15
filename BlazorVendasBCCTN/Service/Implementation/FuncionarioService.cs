@@ -1,5 +1,6 @@
 ﻿using BlazorVendasBCCTN.Data.Context;
 using BlazorVendasBCCTN.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlazorVendasBCCTN.Service.Interface
 {
@@ -12,34 +13,41 @@ namespace BlazorVendasBCCTN.Service.Interface
             _context = context;
         }
 
-        public Task AdicionarAsync(Funcionario funcionario)
+        public async Task AdicionarAsync(Funcionario funcionario)
         {
-            throw new NotImplementedException();
+            _context.Funcionarios.Add(funcionario);
+            await _context.SaveChangesAsync();
         }
 
-        public Task AlterarAsync(Funcionario funcionario)
+        public async Task AlterarAsync(Funcionario funcionario)
         {
-            throw new NotImplementedException();
+            _context.Funcionarios.Update(funcionario);
+            await _context.SaveChangesAsync();
         }
 
-        public Task ExcluirAsync(int id)
+        public async Task ExcluirAsync(int id)
         {
-            throw new NotImplementedException();
+            var funcionario = await _context.Funcionarios.FindAsync(id);
+            if (funcionario != null)
+            {
+                _context.Funcionarios.Remove(funcionario);
+                await _context.SaveChangesAsync();
+            }
         }
 
-        public Task<IEnumerable<Funcionario>> ListarTodosAsync()
+        public async Task<IEnumerable<Funcionario>> ListarTodosAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Funcionarios.ToListAsync();
         }
 
-        public Task<Funcionario> PesquisarPorIdAsync(int id)
+        public async Task<Funcionario> PesquisarPorIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Funcionarios.FindAsync(id);
         }
 
-        public Task<Funcionario> PesquisarPorNomeAsync(string nome)
+        public async Task<Funcionario> PesquisarPorNomeAsync(string nome)
         {
-            throw new NotImplementedException();
+            return await _context.Funcionarios.FindAsync(nome);
         }
     }
 }

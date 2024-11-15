@@ -1,6 +1,15 @@
 using BlazorVendasBCCTN.Components;
+using BlazorVendasBCCTN.Data.Context;
+using BlazorVendasBCCTN.Service.Interface;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<SQLServerContext>(options =>
+    options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IFuncionarioService, FuncionarioService>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

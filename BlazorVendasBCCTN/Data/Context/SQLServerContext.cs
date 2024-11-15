@@ -9,5 +9,9 @@ namespace BlazorVendasBCCTN.Data.Context
         {
         }
         public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<ItemVenda> ItensVenda { get; set; }
     }
 }
