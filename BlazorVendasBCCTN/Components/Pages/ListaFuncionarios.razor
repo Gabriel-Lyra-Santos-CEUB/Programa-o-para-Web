@@ -1,0 +1,101 @@
+﻿@page "/listaFuncionarios"
+@using BlazorVendasBCCTN.Entities
+@using BlazorVendasBCCTN.Service.Interface
+
+@inject IFuncionarioService funcionarioService
+@inject NavigationManager Navigation
+
+<h3>
+    Lista de Funcionários
+</h3>
+
+<div class="card">
+    <div>
+        <button class="btn btn-success">
+            Novo Funcionario
+        </button>
+    </div>
+    @if(funcionarios == null)
+    {
+        <p><em>Carregando.....</em></p>
+    }
+    else
+    {
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        CPF
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Cargo
+                    </th>
+                    <th>
+                        Salario
+                    </th>
+                    <th>
+                        Ações
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var funcionario in funcionarios)
+                {
+                    <tr>
+                        <td>
+                            @funcionario.Nome
+                        </td>
+                        <td>
+                            @funcionario.Cpf
+                        </td>
+                        <td>
+                            @funcionario.Email
+                        </td>
+                        <td>
+                            @funcionario.Cargo
+                        </td>
+                        <td>
+                            @funcionario.Salario.ToString("C")
+                        </td>
+                        <td>
+                            <button class="btn btn-primary">
+                                Editar
+                            </button>
+                            <button class="btn btn-danger">
+                                Excluir
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    private IEnumerable<Funcionario> funcionarios;
+    private async Task LoadFuncionarios()
+    {
+        funcionarios = funcionarios.ToList();
+    }
+    private void EditFuncionario(int id)
+    {
+        Navigation.NavigateTo($"/funcionario/edit/{id}");
+    }
+    private void CreateFuncionario()
+    {
+        Navigation.NavigateTo($"/funcionario/edit");
+    }
+    private async Task DeleteFuncionario(int id)
+    {
+        await funcionarioService.ExcluirAsync(id);
+        LoadFuncionarios();
+        
+    }
+}

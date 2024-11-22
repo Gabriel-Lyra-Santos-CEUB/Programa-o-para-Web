@@ -10,6 +10,7 @@ builder.Services.AddDbContext<SQLServerContext>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<IFuncionarioService, FuncionarioService>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
